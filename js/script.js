@@ -5,9 +5,9 @@
 	$( function(){
 
 		$(".crosscover").crosscover({
-		   	inClass:'fadeInLeftBig',
-  			outClass:'fadeOutLeftBig',
-		    interval: 7000,
+		   	inClass:'fadeInRightBig',
+  			outClass:'fadeOutRightBig',
+		    interval: 8000,
 		    startIndex: 0,
 		    autoPlay: true,
 		    dotsNav: true,
@@ -24,6 +24,29 @@
 
 	$( function(){
 
+		$(".dropdown").hide();
+
+		$("#mobile-nav").on( "click", function(e){   //e is just an object that stores what happened.
+
+	      	$(".dropdown").slideDown(500);
+	      	e.stopPropagation();
+		});
+
+		$(window).on( "click", function(e){   //e is just an object that stores what happened.
+
+	      	$(".dropdown").slideUp();
+
+		});
+
+		$("#main-nav").mouseover(function(e){   //e is just an object that stores what happened.
+
+	      	$(".dropdown").slideDown(500);
+
+		});
+
+		$(".dropdown").mouseleave(function () {
+			$(".dropdown").slideUp();
+		});
 	});
 
 })( window, undefined );
