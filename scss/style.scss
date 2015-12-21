@@ -1,4 +1,5 @@
 @import "compass";
+
 $spacing: 40px 0px;
 
 /*Colors///////////////////////////////////////
@@ -6,7 +7,8 @@ $spacing: 40px 0px;
 
 $textgrey:#333333;
 $breakgrey:#f4f3f6;
-$red:#960c1a;
+$red:#ab2431;
+$black:#222222;
 
 
 /***** Default STYLES *************/
@@ -20,10 +22,9 @@ h1{
     font-size: 2.4em;
     letter-spacing: 2px;
 }
-h3{
-     font-family: 'Oswald', sans-serif;
-     letter-spacing: 2px;
-} 
+h2{
+    font-weight: 300;
+}
 p{
     line-height: 1.5em;
 }
@@ -54,14 +55,20 @@ blockquote {
     margin: 0 auto;
 }
 .button{
-    transition: 1s ease;
+    color:white;
+    margin-top:20px;
+    padding:10px 15px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: 1s ease all;
     &:hover{
-        color: $textgrey;
+        color: white;
         background-color: rgba(255, 255, 255, 0.5);
     }
 }
+
 .dropdown{
-    position: fixed;
+    position: absolute;
     top: 65px;
     right: 0px;
     width: 200px;
@@ -73,7 +80,8 @@ blockquote {
         color:white;
         font-size: 0.9em;
         &:hover{
-            color:$red;
+            border-bottom:3px solid $red;
+
         }
     }
     ul{
@@ -81,6 +89,24 @@ blockquote {
     }
     li{
         padding:10px;
+    }
+}
+
+.subpage-background{
+    background-image: url("../img/sub-background.jpg");
+    top:0;
+    height: 400px;
+    text-align: center;
+    h1{
+        padding:160px 0 20px 0;
+        margin:0;
+        color:white;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.4em;
+    }
+    a{
+        margin:50px;
+        text-align: center;
     }
 }
 
@@ -128,7 +154,8 @@ blockquote {
 }
 .crosscover{
     h1{
-       font-family: 'Work Sans', sans-serif; 
+       font-family: 'Montserrat', sans-serif;
+       font-size:2.4em; 
     }
     h2{
         margin-bottom: 30px;
@@ -136,14 +163,34 @@ blockquote {
     img{
         max-height:200px;
     }
-    .button{
-        color:white;
-        margin-top:20px;
-        padding:10px 15px;
-        border: 2px solid white;
-        border-radius: 5px;
+}
+.subpage-template{
+    padding:25px 3% 40px 3%;
+    h1{
+        font-size: 2em;
+        margin:40px 0 20px 0px;
+        text-transform: uppercase;
     }
-
+    span{
+        color:$red;
+    }
+    h2{
+        font-size: 1.1em;
+        line-height: 1.2em;
+        font-weight: 300;
+    }
+    h3{
+        font-size: 1.2em;
+        font-weight: 500;
+        color:$red;
+    }
+    ul{
+        padding:20px 40px;
+        line-height: 2em;
+    }
+    a{
+        color:$red;
+    }
 }
 .midsection{
     h1{
@@ -156,13 +203,16 @@ blockquote {
     }
     h2{
         font-size: 1.3em;
-        font-weight: 300;
         text-align: center;
+        padding:10px 0;
     }
     h3{
         font-size: 1.2em;
-        font-weight: 500;
+        font-weight: 600;
         color:$red;
+    }
+    p{
+        font-family: sans-serif;
     }
 
 }
@@ -186,6 +236,9 @@ blockquote {
         width:50%;
         max-width: 220px;
     }
+    p{
+        padding-right:3%;
+    }
 }
 .clients{
     background-image: url("../img/city.jpg");
@@ -193,39 +246,42 @@ blockquote {
     background-repeat: no-repeat;
     color:white;
     padding:40px;
+    margin:20px 0px;
     h1{
         text-align: center;
-        color:$textgrey;
+        color:white;
     }
     span{
-        color:$red;
+        color:$textgrey
     }
     img{
-        width:50%;
+        width:55%;
         margin: 0 auto;
-        max-width: 400px;
-        opacity: 0.9;
+        max-width: 200px;
+        opacity: 0.6;
+        padding:25px;
     }
     ul{
         list-style:none;
     }
 }
 .quote{
-    margin:50px 0 100px 0;
+    margin:50px 0 265px 5%;
     height:200px;
     img{
-        padding:40px;
         width:40%;
         float:left;
         max-width: 200px;
-        border-radius:100px;
+        border-radius:200px;
+        border:8px solid $textgrey;
     }
     div{
-        padding:50px 80px 0 80px;
+        padding:25px 80px 0 80px;
         p{
-        font-family: arial;
-        font-size: 1.2em;
-        text-align: center;
+            font-family: 'Raleway';
+            font-size: 1.1em;
+            font-style: italic;
+            text-align: center;
         }
     }
 }
@@ -259,9 +315,21 @@ footer{
 }
 
 @media screen and (min-width: 625px) {
+
+    .crosscover{
+        h1{
+           font-family: 'Montserrat', sans-serif;
+           font-size:3em; 
+        }
+    }
+    .subpage-background{
+        h1{
+            font-size: 3em;
+        }
+    }
     .solutions{
         div{
-            width:40%;
+            width:38%;
             height:420px;
             float:left;
             margin-left: 10%;
@@ -269,6 +337,9 @@ footer{
         img{
              width:70%;
          }
+    }
+    .quote{
+        margin:50px 0 90px 5%;
     }
 }
 
@@ -280,7 +351,7 @@ footer{
 
     .main-nav{
         display:block;
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Raleway', sans-serif;
         ul{
             list-style:none;
             float: right;
@@ -298,11 +369,17 @@ footer{
             color:white;
             font-family: 'Montserrat';
             padding: 5px;
-            opacity:0.8;
             &:hover{
-                opacity:1;
+                opacity:0.8;
             }
         }
+    }
+    .dropdown{
+        position: fixed;
+        top: 65px;
+        right: 150px;
+        width: 200px;
+        padding: 10px;
     }
 
     .solutions{
@@ -312,9 +389,9 @@ footer{
             color:$textgrey;
         }
         div {
-            width:40%;
-            height:px;
+            width:38%;
             float:left;
+            height:500px;
             margin-left: 10%;
             -webkit-box-shadow: 9px 5px 18px -6px rgba(204,202,204,1);
             -moz-box-shadow: 9px 5px 18px -6px rgba(204,202,204,1);
@@ -322,7 +399,6 @@ footer{
             &:hover{
                 opacity:0.8;
             }
-
        }
        img{
         display:block;
@@ -330,7 +406,13 @@ footer{
     }
     .clients{
         li{
+            width:19%;
             display:inline-block;
+        }
+    }
+    .quote{
+        p{
+            font-size:1.4em;
         }
     }
     footer{
