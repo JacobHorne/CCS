@@ -1,24 +1,13 @@
 
-* {
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-font-smoothing:antialiased;
-	-moz-font-smoothing:antialiased;
-	-o-font-smoothing:antialiased;
-	font-smoothing:antialiased;
-	text-rendering:optimizeLegibility;
-}
 
 body{
-	padding-top:50px;
+	padding-top:100px;
 	background:#333333;
+	font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
-	max-width:500px;
+.form-wrapper {
+	max-width:700px;
 	width:95%;
 	margin:0 auto;
 	position:relative;
@@ -37,9 +26,10 @@ body{
 	-webkit-border-radius:4px;
 	-moz-border-radius:4px;
 	background:#F9F9F9;
-	padding:25px;
+	padding:40px;
 }
 #contact-form h3 {
+	margin:0;
 	color:#ab2431;
 	display:block;
 	font-size:28px;
@@ -100,13 +90,6 @@ body{
 }
 #contact-form button[type="submit"]:hover {
 	background-image:linear-gradient(bottom, #ab2431 0%, #<footer>
-            <img src="img/logo.png" alt="CCS logo">
-            <h3>400 Northeast Drive Suite I Columbia, SC 29203</h3>
-            <a href="tel:877-659-3294">877-659-3294</a>
-            <a href="www.ccscable.com">www.ccscable.com</a>
-            <a href="mailto: info@ccscable.com"> info@ccscable.com</a>
-            <h4>All rights reserved. All photography property of CCS Cable.</h4>
-        </footer> 52%);
 	background-image:-moz-linear-gradient(bottom, #ab2431 0%, #ab2431 52%);
 	background-image:-webkit-linear-gradient(bottom, #ab2431 0%, #ab2431 52%);
 	-webkit-transition:background 0.3s ease-in-out;

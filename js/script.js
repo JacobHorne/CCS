@@ -28,7 +28,7 @@
 
 		$("#mobile-nav").on( "click", function(e){   //e is just an object that stores what happened.
 
-	      	$(".dropdown").slideDown(500);
+	      	$(".dropdown").slideDown(200);
 	      	e.stopPropagation();
 		});
 
@@ -40,7 +40,7 @@
 
 		$("#main-nav").mouseover(function(e){   //e is just an object that stores what happened.
 
-	      	$(".dropdown").slideDown(500);
+	      	$(".dropdown").slideDown(200);
 
 		});
 
