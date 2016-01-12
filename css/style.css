@@ -69,13 +69,13 @@ ul {
 
 /* line 64, ../scss/style.scss */
 .dropdown {
-  position: absolute;
-  top: 65px;
+  position: fixed;
+  top: 68px;
   right: 0px;
   width: 200px;
   padding: 10px;
   font-family: 'Montserrat', sans-serif;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
 /* line 73, ../scss/style.scss */
@@ -86,7 +86,7 @@ ul {
 }
 /* line 77, ../scss/style.scss */
 .dropdown a:hover {
-  border-bottom: 3px solid #ab2431;
+  color: #ab2431;
 }
 /* line 82, ../scss/style.scss */
 .dropdown ul {
@@ -101,35 +101,38 @@ ul {
 .subpage-background {
   background-image: url("../img/sub-background.jpg");
   top: 0;
-  height: 400px;
+  height: 450px;
   text-align: center;
+  background-position: center center;
   background: contain;
 }
-/* line 96, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 .sound .subpage-background {
   background-image: url("../img/sound.jpg");
+  background-position: center top;
 }
-/* line 99, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .voip .subpage-background {
   background-image: url("../img/voip.jpg");
 }
-/* line 102, ../scss/style.scss */
+/* line 105, ../scss/style.scss */
 .data .subpage-background {
   background-image: url("../img/cabling.jpg");
 }
-/* line 105, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .it .subpage-background {
   background-image: url("../img/it.jpg");
 }
-/* line 109, ../scss/style.scss */
+/* line 112, ../scss/style.scss */
 .subpage-background h1 {
   padding: 160px 0 20px 0;
   margin: 0;
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 2.4em;
+  text-shadow: 1px 1px #333333;
 }
-/* line 116, ../scss/style.scss */
+/* line 120, ../scss/style.scss */
 .subpage-background a {
   margin: 50px;
   text-align: center;
@@ -137,28 +140,28 @@ ul {
 
 /***** CLEARFIX is applied to the parent of floated elements *************/
 /*************************************************************************/
-/* line 125, ../scss/style.scss */
+/* line 129, ../scss/style.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 127, ../scss/style.scss */
+/* line 131, ../scss/style.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 131, ../scss/style.scss */
+/* line 135, ../scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
 /***** SITE STYLES *************/
 /**********************************/
-/* line 139, ../scss/style.scss */
+/* line 143, ../scss/style.scss */
 .main-nav {
   display: none;
 }
 
-/* line 143, ../scss/style.scss */
+/* line 147, ../scss/style.scss */
 .navigation-bar {
   position: fixed;
   top: 0;
@@ -166,103 +169,119 @@ ul {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
-/* line 149, ../scss/style.scss */
+/* line 153, ../scss/style.scss */
 .navigation-bar img {
-  padding: 8px 0px 8px 5%;
-  width: 120px;
+  padding: 13px 0px 13px 5%;
+  width: 100px;
   max-width: 120px;
   float: left;
 }
-/* line 155, ../scss/style.scss */
+/* line 159, ../scss/style.scss */
 .navigation-bar .menu-icon {
   padding: 32px 5% 0px 5%;
   width: 85px;
   float: right;
 }
 
-/* line 161, ../scss/style.scss */
+/* line 165, ../scss/style.scss */
 .crosscover-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
-/* line 163, ../scss/style.scss */
-.crosscover-overlay h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.4em;
-  text-shadow: 1px 1px #f4f3f6;
-}
-/* line 168, ../scss/style.scss */
+/* line 167, ../scss/style.scss */
 .crosscover-overlay h2 {
   margin-bottom: 30px;
 }
-/* line 171, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .crosscover-overlay img {
   max-height: 200px;
 }
 
-/* line 175, ../scss/style.scss */
+/* line 174, ../scss/style.scss */
+.crosscover-item {
+  background-position: center top;
+}
+
+/* line 177, ../scss/style.scss */
+.slider-text {
+  position: absolute;
+  left: 50%;
+  top: 140px;
+  transform: translate(-50%, -50%);
+  z-index: 2000;
+}
+/* line 183, ../scss/style.scss */
+.slider-text h1 {
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  text-shadow: 1px 1px #f4f3f6;
+}
+
+/* line 191, ../scss/style.scss */
 .subpage-template {
   padding: 25px 3% 40px 3%;
 }
-/* line 177, ../scss/style.scss */
+/* line 193, ../scss/style.scss */
 .subpage-template h1 {
   font-size: 2em;
   margin: 40px 0 20px 0px;
   text-transform: uppercase;
 }
-/* line 182, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .subpage-template span {
   color: #ab2431;
 }
-/* line 185, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 .subpage-template h2 {
   font-size: 1.2em;
   line-height: 1.2em;
   font-weight: 300;
 }
-/* line 190, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .subpage-template h3 {
   font-size: 1.2em;
   font-weight: 500;
   color: #ab2431;
 }
-/* line 195, ../scss/style.scss */
+/* line 211, ../scss/style.scss */
 .subpage-template ul {
   padding: 20px 40px;
   line-height: 2em;
 }
-/* line 199, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 .subpage-template a {
   color: #ab2431;
 }
 
-/* line 204, ../scss/style.scss */
+/* line 220, ../scss/style.scss */
 .midsection h1 {
   margin: 40px 0 20px 0px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 209, ../scss/style.scss */
+/* line 225, ../scss/style.scss */
 .midsection span {
   color: #ab2431;
 }
-/* line 212, ../scss/style.scss */
+/* line 228, ../scss/style.scss */
 .midsection h2 {
   font-size: 1.3em;
   text-align: center;
   padding: 10px 0;
 }
-/* line 217, ../scss/style.scss */
+/* line 233, ../scss/style.scss */
 .midsection h3 {
   font-size: 1.2em;
   font-weight: 600;
   color: #ab2431;
 }
-/* line 222, ../scss/style.scss */
+/* line 238, ../scss/style.scss */
 .midsection p {
   font-family: sans-serif;
 }
 
-/* line 228, ../scss/style.scss */
+/* line 244, ../scss/style.scss */
 .solutions a {
   color: #333333;
   display: block;
@@ -272,36 +291,36 @@ ul {
   -moz-box-shadow: 0 0 16px 6px rgba(204, 202, 204, 0.6);
   box-shadow: 0 0 16px 6px rgba(204, 202, 204, 0.6);
 }
-/* line 239, ../scss/style.scss */
+/* line 255, ../scss/style.scss */
 .solutions img {
   margin: 0 auto;
   width: 50%;
   max-width: 220px;
 }
-/* line 244, ../scss/style.scss */
+/* line 260, ../scss/style.scss */
 .solutions p {
   padding-right: 3%;
 }
 
-/* line 248, ../scss/style.scss */
+/* line 264, ../scss/style.scss */
 .clients {
   background-image: url("../img/city.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   padding: 40px;
-  margin: 20px 0px;
+  margin: 20px 0px 0px 0px;
 }
-/* line 255, ../scss/style.scss */
+/* line 271, ../scss/style.scss */
 .clients h1 {
   text-align: center;
   color: white;
 }
-/* line 259, ../scss/style.scss */
+/* line 275, ../scss/style.scss */
 .clients span {
   color: #333333;
 }
-/* line 262, ../scss/style.scss */
+/* line 278, ../scss/style.scss */
 .clients img {
   width: 55%;
   margin: 0 auto;
@@ -309,68 +328,56 @@ ul {
   opacity: 0.8;
   padding: 25px;
 }
-/* line 269, ../scss/style.scss */
+/* line 285, ../scss/style.scss */
 .clients ul {
   list-style: none;
 }
 
-/* line 273, ../scss/style.scss */
-.quote {
-  margin: 50px 0 265px 5%;
-  height: 200px;
+/* line 289, ../scss/style.scss */
+.quotes {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0 40px 0;
 }
-/* line 276, ../scss/style.scss */
-.quote img {
-  width: 40%;
-  float: left;
-  max-width: 200px;
-  border-radius: 200px;
-  border: 8px solid #333333;
-}
-/* line 283, ../scss/style.scss */
-.quote div {
-  padding: 25px 80px 0 80px;
-}
-/* line 285, ../scss/style.scss */
-.quote div p {
-  font-family: 'Raleway';
-  font-size: 1.1em;
-  font-style: italic;
+/* line 293, ../scss/style.scss */
+.quotes p {
   text-align: center;
+  font-family: 'Raleway';
+  font-size: 1.3em;
 }
 
-/* line 293, ../scss/style.scss */
+/* line 300, ../scss/style.scss */
 .contact {
   padding: 20px 0;
 }
 
-/* line 297, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 footer {
   padding: 40px;
   color: white;
   background-color: #333333;
 }
-/* line 301, ../scss/style.scss */
+/* line 308, ../scss/style.scss */
 footer img {
   width: 50%;
   max-width: 175px;
   margin: 0 auto;
   padding-right: 5%;
 }
-/* line 307, ../scss/style.scss */
+/* line 314, ../scss/style.scss */
 footer h3 {
   font-family: arial;
   font-size: 1em;
   font-weight: 300;
   text-align: center;
 }
-/* line 313, ../scss/style.scss */
+/* line 320, ../scss/style.scss */
 footer h4 {
   font-size: 0.7em;
   text-align: center;
   letter-spacing: 1px;
 }
-/* line 318, ../scss/style.scss */
+/* line 325, ../scss/style.scss */
 footer a {
   display: block;
   text-align: center;
@@ -380,22 +387,45 @@ footer a {
 }
 
 @media screen and (min-width: 625px) {
-  /* line 330, ../scss/style.scss */
+  /* line 336, ../scss/style.scss */
+  .navigation-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+  }
+  /* line 342, ../scss/style.scss */
+  .navigation-bar img {
+    padding: 13px 0px 13px 5%;
+    width: 130px;
+  }
+
+  /* line 348, ../scss/style.scss */
   .crosscover h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 3em;
   }
 
-  /* line 336, ../scss/style.scss */
+  /* line 353, ../scss/style.scss */
+  .slider-text {
+    top: 150px;
+  }
+  /* line 355, ../scss/style.scss */
+  .slider-text h1 {
+    font-size: 2.2em;
+  }
+
+  /* line 360, ../scss/style.scss */
   .subpage-background h1 {
     font-size: 3em;
   }
 
-  /* line 340, ../scss/style.scss */
+  /* line 364, ../scss/style.scss */
   .solutions {
     text-align: center;
   }
-  /* line 343, ../scss/style.scss */
+  /* line 366, ../scss/style.scss */
   .solutions a {
     box-sizing: border-box;
     display: inline-block;
@@ -404,81 +434,76 @@ footer a {
     margin-right: 4%;
     vertical-align: top;
   }
-  /* line 351, ../scss/style.scss */
+  /* line 374, ../scss/style.scss */
   .solutions img {
     width: 70%;
   }
-
-  /* line 355, ../scss/style.scss */
-  .quote {
-    margin: 50px 0 90px 5%;
-  }
 }
-@media screen and (min-width: 840px) {
-  /* line 362, ../scss/style.scss */
+@media screen and (min-width: 830px) {
+  /* line 382, ../scss/style.scss */
   .menu-icon {
     display: none;
   }
 
-  /* line 366, ../scss/style.scss */
+  /* line 386, ../scss/style.scss */
   .main-nav {
     display: block;
     font-family: 'Raleway', sans-serif;
   }
-  /* line 369, ../scss/style.scss */
+  /* line 389, ../scss/style.scss */
   .main-nav ul {
     list-style: none;
     float: right;
     padding: 28px 5% 0px 0px;
   }
-  /* line 374, ../scss/style.scss */
+  /* line 394, ../scss/style.scss */
   .main-nav li {
     display: inline-block;
     padding: 5px;
   }
-  /* line 377, ../scss/style.scss */
+  /* line 397, ../scss/style.scss */
   .main-nav li:hover {
     color: #ab2431;
     border-bottom: 2px solid #ab2431;
   }
-  /* line 382, ../scss/style.scss */
+  /* line 402, ../scss/style.scss */
   .main-nav a {
     color: white;
     font-family: 'Montserrat';
     padding: 5px;
   }
-  /* line 386, ../scss/style.scss */
+  /* line 406, ../scss/style.scss */
   .main-nav a:hover {
     opacity: 0.8;
   }
 
-  /* line 391, ../scss/style.scss */
+  /* line 411, ../scss/style.scss */
   .dropdown {
     position: fixed;
-    top: 65px;
-    right: 150px;
+    top: 68px;
+    right: 16%;
     width: 200px;
     padding: 10px;
   }
 
-  /* line 399, ../scss/style.scss */
+  /* line 419, ../scss/style.scss */
+  .slider-text h1 {
+    font-size: 3em;
+  }
+
+  /* line 424, ../scss/style.scss */
   .clients li {
     width: 19%;
     display: inline-block;
   }
 
-  /* line 405, ../scss/style.scss */
-  .quote p {
-    font-size: 1.4em;
-  }
-
-  /* line 411, ../scss/style.scss */
+  /* line 431, ../scss/style.scss */
   footer a:hover, footer h4:hover {
     opacity: 0.8;
   }
 }
 @media screen and (min-width: 1000px) {
-  /* line 422, ../scss/style.scss */
+  /* line 442, ../scss/style.scss */
   .solutions a {
     width: 22%;
     margin-left: 1%;
@@ -486,8 +511,17 @@ footer a {
     padding: 10px;
     min-height: 480px;
   }
-  /* line 429, ../scss/style.scss */
+  /* line 449, ../scss/style.scss */
   .solutions a:hover {
     opacity: 0.8;
+  }
+
+  /* line 454, ../scss/style.scss */
+  .dropdown {
+    position: fixed;
+    top: 68px;
+    right: 12%;
+    width: 200px;
+    padding: 10px;
   }
 }

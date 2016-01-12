@@ -2,12 +2,12 @@
 
 (function( window, undefined ){
 
-	$( function(){
-
+	//CODE FOR SLIDER
+	$( function(){ 
 		$(".crosscover").crosscover({
 		   	inClass:'fadeInRightBig',
   			outClass:'fadeOutRightBig',
-		    interval: 8000,
+		    interval: 6000,
 		    startIndex: 0,
 		    autoPlay: true,
 		    dotsNav: true,
@@ -22,25 +22,39 @@
 		});
 	});
 
-	$( function(){
+	$(function () {
+
+	    var counter = 0,
+	        divs = $('#it, #data, #sound, #voip, #security');
+
+	    function showDiv () {
+	        divs.hide() // hide all divs
+	            .filter(function (index) { 
+	            	return index == counter; }) // figure out correct div to show
+	            .fadeIn('slow'); // and show it
+	        counter++;
+	    }; // function to loop through divs and show correct div
+	    showDiv(); // show first div    
+
+	    setInterval(function () {
+	        showDiv(); // show next div
+	    }, 10 * 600); // do this every 10 seconds    
+
+	});
+
+
+	//DROP DOWN ON HOVER AND CLICK
+	$(function(){
 
 		$(".dropdown").hide();
 
-		$("#mobile-nav").on( "click", function(e){   //e is just an object that stores what happened.
-
-	      	$(".dropdown").slideDown(200);
-	      	e.stopPropagation();
+		$("#mobile-nav").on( "click", function(e){   
+	      	$(".dropdown").slideToggle(300);
+	      	
 		});
 
-		$(window).on( "click", function(e){   //e is just an object that stores what happened.
-
-	      	$(".dropdown").slideUp();
-
-		});
-
-		$("#main-nav").mouseover(function(e){   //e is just an object that stores what happened.
-
-	      	$(".dropdown").slideDown(200);
+		$("#main-nav").mouseover(function(e){  
+	      	$(".dropdown").slideDown(300);
 
 		});
 
@@ -50,6 +64,8 @@
 	});
 
 
+
+	//CONTACT FORM JAVASCRIPT
 	(function() {
 
 	// Create input element for testing

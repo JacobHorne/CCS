@@ -62,20 +62,20 @@ ul{
 }
 
 .dropdown{
-    position: absolute;
-    top: 65px;
+    position: fixed;
+    top: 68px;
     right: 0px;
     width: 200px;
     padding: 10px;
     font-family: 'Montserrat', sans-serif;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     a{
         display:block;
         color:white;
         font-size: 0.9em;
         &:hover{
-            border-bottom:3px solid $red;
+            color:$red;
 
         }
     }
@@ -90,11 +90,14 @@ ul{
 .subpage-background{
     background-image: url("../img/sub-background.jpg");
     top:0;
-    height: 400px;
+    height: 450px;
     text-align: center;
+    background-position:center center;
     background:contain;
+
     .sound &{
         background-image: url("../img/sound.jpg");
+        background-position:center top;
     }
     .voip &{
         background-image: url("../img/voip.jpg");
@@ -112,6 +115,7 @@ ul{
         color:white;
         font-family: 'Montserrat', sans-serif;
         font-size: 2.4em;
+        text-shadow: 1px 1px $textgrey;
     }
     a{
         margin:50px;
@@ -147,10 +151,10 @@ ul{
 	background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     img{
-		padding:8px 0px 8px 5%;
-		width:120px;
-		max-width: 120px;
-        float:left;
+		padding: 13px 0px 13px 5%;
+        width: 100px;
+        max-width: 120px;
+        float: left;
 	}
 	.menu-icon{
 		padding:32px 5% 0px 5%;
@@ -159,17 +163,29 @@ ul{
 	}
 }
 .crosscover-overlay{
-    background-color: rgba(0, 0, 0, 0.4);
-    h1{
-       font-family: 'Montserrat', sans-serif;
-       font-size:2.4em; 
-       text-shadow: 1px 1px $breakgrey;
-    }
+    background-color: rgba(0, 0, 0, 0.2);
     h2{
         margin-bottom: 30px;
     }
     img{
         max-height:200px;
+    }
+}
+.crosscover-item{
+    background-position: center top;
+}
+.slider-text{
+    position:absolute;
+    left: 50%;
+    top: 140px;
+    transform: translate(-50%,-50%);
+    z-index: 2000;
+    h1{
+       text-align:center;
+       color:white;
+       font-family: 'Montserrat', sans-serif;
+       font-size:2em; 
+       text-shadow: 1px 1px $breakgrey;
     }
 }
 .subpage-template{
@@ -251,7 +267,7 @@ ul{
     background-repeat: no-repeat;
     color:white;
     padding:40px;
-    margin:20px 0px;
+    margin:20px 0px 0px 0px;
     h1{
         text-align: center;
         color:white;
@@ -270,26 +286,17 @@ ul{
         list-style:none;
     }
 }
-.quote{
-    margin:50px 0 265px 5%;
-    height:200px;
-    img{
-        width:40%;
-        float:left;
-        max-width: 200px;
-        border-radius:200px;
-        border:8px solid $textgrey;
-    }
-    div{
-        padding:25px 80px 0 80px;
+.quotes{
+        width:80%;
+        margin:0 auto;
+        padding:30px 0 40px 0;
         p{
-            font-family: 'Raleway';
-            font-size: 1.1em;
-            font-style: italic;
             text-align: center;
+            font-family: 'Raleway';
+            font-size: 1.3em;
         }
     }
-}
+
 .contact{
     padding:20px 0;
 }
@@ -326,10 +333,27 @@ footer{
 
 @media screen and (min-width: 625px) {
 
+    .navigation-bar{
+    position:fixed;
+    top:0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+        img{
+            padding: 13px 0px 13px 5%;
+            width: 130px;
+        }
+    }
     .crosscover{
         h1{
            font-family: 'Montserrat', sans-serif;
            font-size:3em; 
+        }
+    }
+    .slider-text{
+        top: 150px;
+        h1{
+           font-size:2.2em; 
         }
     }
     .subpage-background{
@@ -339,7 +363,6 @@ footer{
     }
     .solutions{
         text-align: center;
-
         a{
             box-sizing: border-box;
             display: inline-block;
@@ -352,13 +375,10 @@ footer{
              width:70%;
         }
     }
-    .quote{
-        margin:50px 0 90px 5%;
-    }
 }
 
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 830px) {
     .menu-icon{
         display: none;
     }
@@ -390,20 +410,20 @@ footer{
     }
     .dropdown{
         position: fixed;
-        top: 65px;
-        right: 150px;
+        top: 68px;
+        right: 16%;
         width: 200px;
         padding: 10px;
+    }
+    .slider-text{
+        h1{
+           font-size:3em; 
+        }
     }
     .clients{
         li{
             width:19%;
             display:inline-block;
-        }
-    }
-    .quote{
-        p{
-            font-size:1.4em;
         }
     }
     footer{
@@ -430,6 +450,13 @@ footer{
                 opacity:0.8;
             }
        }
+    }
+    .dropdown{
+        position: fixed;
+        top: 68px;
+        right: 12%;
+        width: 200px;
+        padding: 10px;
     }
 }
 
