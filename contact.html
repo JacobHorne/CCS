@@ -52,7 +52,7 @@
 
         <section class="subpage-template">
             <div class="form-wrapper clearfix">
-                <form id="contact-form" action="mailto:info@ccscable.com" method="mailto:info@ccscable.com">
+                <form id="contact-form" action="test.php" method="POST">
                     <h3>We would love to hear from you.</h3>
 
                     <div class="contact">
@@ -65,25 +65,25 @@
                     <div>
                         <label>
                             <span>Name:</span>
-                            <input placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
+                            <input name="name" placeholder="Please enter your name" type="text" tabindex="1" required autofocus>
                         </label>
                     </div>
                     <div>
                         <label>
                             <span>Email:</span>
-                            <input placeholder="Please enter your email address" type="email" tabindex="2" required>
+                            <input name="email" placeholder="Please enter your email address" type="email" tabindex="2" required>
                         </label>
                     </div>
                     <div>
                         <label>
                             <span>Telephone:</span>
-                            <input placeholder="Please enter your number" type="tel" tabindex="3" required>
+                            <input name="phonenumber" placeholder="Please enter your number" type="tel" tabindex="3" required>
                         </label>
                     </div>
                     <div>
                         <label>
                             <span>Message: (required)</span>
-                            <textarea placeholder="Include all the details you can" tabindex="5" required></textarea>
+                            <textarea name="message" placeholder="Include all the details you can" tabindex="5" required></textarea>
                         </label>
                     </div>
                     <div>

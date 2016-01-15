@@ -22,14 +22,37 @@ module.exports = function( grunt ){
             styles : {
                 files : [ 'scss/*.scss' ],
                 tasks : [ 'compass:verbose' ]
+            },
+            html: {
+              files: ['*.html']
+            },
+            js: {
+                files: ['js/**/*.js']
+            },
+            options: {
+                livereload: true
             }
-        }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    base: '.',
+                    hostname: '0.0.0.0',
+                    protocol: 'http',
+                    livereload: true,
+                    open: true,
+                }
+            }
+        },
     });
 
     //2. Gives access to grunt tasks that have been loaded
     //through NPM
     //takes 1 argument: a string name for the NPM package
     //grunt.loadNpmTasks();
+    grunt.loadNpmTasks( "grunt-contrib-connect" );
     grunt.loadNpmTasks( "grunt-contrib-compass" );
     grunt.loadNpmTasks( "grunt-contrib-watch" );
 
@@ -40,7 +63,7 @@ module.exports = function( grunt ){
     //1. string name of task
     //2. an array of tasks to run 
     //grunt.registerTask();
-    grunt.registerTask( "default", [ "watch" ] );
+    grunt.registerTask( "default", [ "connect", "watch" ] );
 
 };
 

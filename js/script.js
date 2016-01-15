@@ -6,7 +6,7 @@
 	$( function(){ 
 		$(".crosscover").crosscover({
 		   	inClass:'fadeInRightBig',
-  			outClass:'fadeOutRightBig',
+  			outClass:'fadeOutLeftBig',
 		    interval: 6000,
 		    startIndex: 0,
 		    autoPlay: true,
@@ -22,25 +22,63 @@
 		});
 	});
 
-	$(function () {
+	//CODE FOR SLIDER TEXT
+	function fadeTitles(titles, $el) {
+		var counter = 0;
+		
+		function updateSliderTitle() {
+			if (counter === titles.length) {
+				counter = 0;
+			}
+			$el.fadeOut(function () {
+				$el.text(titles[counter])
+				$el.fadeIn()
+				counter++;
+			})
+		}
 
-	    var counter = 0,
-	        divs = $('#it, #data, #sound, #voip, #security');
+		updateSliderTitle();
+		setInterval(updateSliderTitle, 10 * 600);
+	}
 
-	    function showDiv () {
-	        divs.hide() // hide all divs
-	            .filter(function (index) { 
-	            	return index == counter; }) // figure out correct div to show
-	            .fadeIn('slow'); // and show it
-	        counter++;
-	    }; // function to loop through divs and show correct div
-	    showDiv(); // show first div    
+	var titles = [
+		'STRUCTURED CABLING',
+		'IT MANAGEMENT',
+		'SOUNDMASKING',
+		'VOIP SOLUTIONS',
+		'SECURITY SYSTEM',
+	];
 
-	    setInterval(function () {
-	        showDiv(); // show next div
-	    }, 10 * 600); // do this every 10 seconds    
+	//OPTION TO CODE A SUBTITLE
+	//var subtitles = [
+	//	'IT MANAGEMENT',
+	//	'CABLING',
+	//	'SOUNDMASKING',
+	//	'',
+	//];
 
-	});
+	fadeTitles(titles, $('#title'));
+
+	//fadeTitles(subtitles, $('#subtitle'));
+
+	// $(function () {
+
+	//     var counter = 0,
+	//         divs = $('#it, #data, #sound, #voip, #security');
+
+	//     function showDiv () {
+	//         divs.hide() // hide all divs
+	//         .filter(function (index) { 
+	//             return index == counter; }) // figure out correct div to show
+	//         .fadeIn('slow'); // and show it
+	//         counter++;
+	//     }; // function to loop through divs and show correct div
+	//     showDiv(); // show first div    
+
+	//     setInterval(function () {
+	//         showDiv(); // show next div
+	//     }, 10 * 600); // do this every 10 seconds    
+	// });
 
 
 	//DROP DOWN ON HOVER AND CLICK
