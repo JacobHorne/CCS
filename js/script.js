@@ -81,19 +81,24 @@
 	// });
 
 
-	//DROP DOWN ON HOVER AND CLICK
+	//DROP DOWN ON HOVER OR ClICK 
 	$(function(){
 
 		$(".dropdown").hide();
 
 		$("#mobile-nav").on( "click", function(e){   
 	      	$(".dropdown").slideToggle(300);
-	      	
+	      	e.preventDefault();
 		});
 
-		$("#main-nav").mouseover(function(e){  
-	      	$(".dropdown").slideDown(300);
+		$("#main-nav").on('click', function(e) {
+			$('.dropdown').slideToggle();
+			e.preventDefault();
+		});
 
+		$("#main-nav").mouseover(function(e) {
+			e.preventDefault();  
+	      	$(".dropdown").slideDown(300);
 		});
 
 		$(".dropdown").mouseleave(function () {

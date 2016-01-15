@@ -181,6 +181,9 @@ ul{
 }
 .crosscover-item{
     background-position: center top;
+    h1{
+        z-index: 4000;
+    }
 }
 .subpage-template{
     padding:25px 3% 40px 3%;
