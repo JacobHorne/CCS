@@ -1,6 +1,6 @@
 <?PHP
  
-require_once("../fgcontactform.php");
+require_once("/fgcontactform.php");
  
 $formproc = new FGContactForm();
  
@@ -14,12 +14,11 @@ $formproc->AddRecipient('jacobhorne@gmail.com'); //<<---Put your
 // and put it here
 $formproc->SetFormRandomKey('2323r23rsddsf');
  
-if(isset($_POST['submitted']))
+if(isset($_POST['submitted12']))
 {
    if($formproc->ProcessForm())
    {
-        $formproc->RedirectToURL("thank-you.html");
+        $formproc->RedirectToURL("index.html");
    }
 }
- 
 ?>

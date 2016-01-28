@@ -2,6 +2,8 @@
 
 (function( window, undefined ){
 
+	console.log(location.search)
+
 	//CODE FOR SLIDER
 	$( function(){ 
 		$(".crosscover").crosscover({
@@ -22,65 +24,6 @@
 		});
 	});
 
-	//CODE FOR SLIDER TEXT
-	function fadeTitles(titles, $el) {
-		var counter = 0;
-		
-		function updateSliderTitle() {
-			if (counter === titles.length) {
-				counter = 0;
-			}
-			$el.fadeOut(function () {
-				$el.text(titles[counter])
-				$el.fadeIn()
-				counter++;
-			})
-		}
-
-		updateSliderTitle();
-		setInterval(updateSliderTitle, 10 * 600);
-	}
-
-	var titles = [
-		'STRUCTURED CABLING',
-		'IT MANAGEMENT',
-		'SOUNDMASKING',
-		'VOIP SOLUTIONS',
-		'SECURITY SYSTEM',
-	];
-
-	//OPTION TO CODE A SUBTITLE
-	//var subtitles = [
-	//	'IT MANAGEMENT',
-	//	'CABLING',
-	//	'SOUNDMASKING',
-	//	'',
-	//];
-
-	fadeTitles(titles, $('#title'));
-
-	//fadeTitles(subtitles, $('#subtitle'));
-
-	// $(function () {
-
-	//     var counter = 0,
-	//         divs = $('#it, #data, #sound, #voip, #security');
-
-	//     function showDiv () {
-	//         divs.hide() // hide all divs
-	//         .filter(function (index) { 
-	//             return index == counter; }) // figure out correct div to show
-	//         .fadeIn('slow'); // and show it
-	//         counter++;
-	//     }; // function to loop through divs and show correct div
-	//     showDiv(); // show first div    
-
-	//     setInterval(function () {
-	//         showDiv(); // show next div
-	//     }, 10 * 600); // do this every 10 seconds    
-	// });
-
-
 	//DROP DOWN ON HOVER OR ClICK 
 	$(function(){
 
@@ -95,18 +38,28 @@
 			$('.dropdown').slideToggle();
 			e.preventDefault();
 		});
-
-		$("#main-nav").mouseover(function(e) {
-			e.preventDefault();  
-	      	$(".dropdown").slideDown(300);
-		});
-
-		$(".dropdown").mouseleave(function () {
-			$(".dropdown").slideUp();
-		});
 	});
 
+	function getQueryParameters(str) {
+		return (str || document.location.search)
+			.replace(/(^\?)/, '')
+			.split('&')
+			.reduce(function (a, x, i) {
+				var n = x.split('='), y = n[0], z = n[1];
+				try { z = JSON.parse(z); } catch(e) { }
+				a[y] = a[y] ? typeof a[y] == 'object' ? (a[y].push(z) && a[y]) : [a[y], z] : z;
+				return a;
+			}, {});
+	}
 
+	
+	$(".email-sent").hide();
+
+	var queryParameters = getQueryParameters(location.search);
+	
+	if (queryParameters.email_sent === true) {
+  		alert("Your message was sent. We will be in touch");
+	}
 
 	//CONTACT FORM JAVASCRIPT
 	(function() {

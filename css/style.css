@@ -52,7 +52,7 @@ ul {
   max-width: 1500px;
 }
 
-/* line 51, ../scss/style.scss */
+/* line 52, ../scss/style.scss */
 .button {
   color: white;
   margin-top: 20px;
@@ -61,13 +61,13 @@ ul {
   border-radius: 5px;
   transition: 1s ease all;
 }
-/* line 58, ../scss/style.scss */
+/* line 59, ../scss/style.scss */
 .button:hover {
   color: white;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 64, ../scss/style.scss */
+/* line 65, ../scss/style.scss */
 .dropdown {
   position: fixed;
   top: 68px;
@@ -78,26 +78,26 @@ ul {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
-/* line 73, ../scss/style.scss */
+/* line 74, ../scss/style.scss */
 .dropdown a {
   display: block;
   color: white;
   font-size: 0.9em;
 }
-/* line 77, ../scss/style.scss */
+/* line 78, ../scss/style.scss */
 .dropdown a:hover {
   color: #ab2431;
 }
-/* line 82, ../scss/style.scss */
+/* line 83, ../scss/style.scss */
 .dropdown ul {
   list-style: none;
 }
-/* line 85, ../scss/style.scss */
+/* line 86, ../scss/style.scss */
 .dropdown li {
   padding: 10px;
 }
 
-/* line 90, ../scss/style.scss */
+/* line 91, ../scss/style.scss */
 .subpage-background {
   background-image: url("../img/sub-background.jpg");
   top: 0;
@@ -106,24 +106,24 @@ ul {
   background-position: center center;
   background: contain;
 }
-/* line 98, ../scss/style.scss */
+/* line 99, ../scss/style.scss */
 .sound .subpage-background {
   background-image: url("../img/sound.jpg");
   background-position: center top;
 }
-/* line 102, ../scss/style.scss */
+/* line 103, ../scss/style.scss */
 .voip .subpage-background {
   background-image: url("../img/voip.jpg");
 }
-/* line 105, ../scss/style.scss */
+/* line 106, ../scss/style.scss */
 .data .subpage-background {
   background-image: url("../img/cabling.jpg");
 }
-/* line 108, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 .it .subpage-background {
   background-image: url("../img/it.jpg");
 }
-/* line 112, ../scss/style.scss */
+/* line 113, ../scss/style.scss */
 .subpage-background h1 {
   padding: 160px 0 20px 0;
   margin: 0;
@@ -132,7 +132,7 @@ ul {
   font-size: 2.4em;
   text-shadow: 1px 1px #333333;
 }
-/* line 120, ../scss/style.scss */
+/* line 121, ../scss/style.scss */
 .subpage-background a {
   margin: 50px;
   text-align: center;
@@ -140,28 +140,28 @@ ul {
 
 /***** CLEARFIX is applied to the parent of floated elements *************/
 /*************************************************************************/
-/* line 129, ../scss/style.scss */
+/* line 130, ../scss/style.scss */
 .clearfix {
   zoom: 1;
 }
-/* line 131, ../scss/style.scss */
+/* line 132, ../scss/style.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 135, ../scss/style.scss */
+/* line 136, ../scss/style.scss */
 .clearfix:after {
   clear: both;
 }
 
 /***** SITE STYLES *************/
 /**********************************/
-/* line 143, ../scss/style.scss */
+/* line 144, ../scss/style.scss */
 .main-nav {
   display: none;
 }
 
-/* line 147, ../scss/style.scss */
+/* line 148, ../scss/style.scss */
 .navigation-bar {
   position: fixed;
   top: 0;
@@ -169,115 +169,118 @@ ul {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
 }
-/* line 153, ../scss/style.scss */
+/* line 154, ../scss/style.scss */
 .navigation-bar img {
   padding: 13px 0px 13px 5%;
   width: 100px;
   max-width: 120px;
   float: left;
 }
-/* line 159, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 .navigation-bar .menu-icon {
   padding: 32px 5% 0px 5%;
   width: 85px;
   float: right;
 }
 
-/* line 165, ../scss/style.scss */
+/* line 166, ../scss/style.scss */
 .crosscover-overlay {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 167, ../scss/style.scss */
-.crosscover-overlay h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.9em;
-  font-weight: 600;
-  text-shadow: 1px 1px #333333;
-  margin-bottom: 14px;
-}
-/* line 174, ../scss/style.scss */
+/* line 168, ../scss/style.scss */
 .crosscover-overlay h2 {
   margin-bottom: 30px;
   font-size: 1.4em;
 }
-/* line 178, ../scss/style.scss */
-.crosscover-overlay img {
-  max-height: 200px;
+
+/* line 173, ../scss/style.scss */
+.crosscover-island {
+  position: absolute;
+  top: 160px;
 }
 
-/* line 182, ../scss/style.scss */
+/* line 177, ../scss/style.scss */
 .crosscover-item {
   background-position: center top;
 }
-/* line 184, ../scss/style.scss */
+/* line 179, ../scss/style.scss */
 .crosscover-item h1 {
-  z-index: 4000;
+  color: white;
+  padding-top: 100px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+  text-shadow: 1px 2px #333333;
+  margin-bottom: 14px;
+  z-index: 5000;
+  text-align: center;
 }
 
-/* line 188, ../scss/style.scss */
+/* line 191, ../scss/style.scss */
 .subpage-template {
   padding: 25px 3% 40px 3%;
 }
-/* line 190, ../scss/style.scss */
+/* line 193, ../scss/style.scss */
 .subpage-template h1 {
   font-size: 2em;
   margin: 40px 0 20px 0px;
   text-transform: uppercase;
 }
-/* line 195, ../scss/style.scss */
+/* line 198, ../scss/style.scss */
 .subpage-template span {
   color: #ab2431;
 }
-/* line 198, ../scss/style.scss */
+/* line 201, ../scss/style.scss */
 .subpage-template h2 {
   font-size: 1.2em;
   line-height: 1.2em;
   font-weight: 300;
 }
-/* line 203, ../scss/style.scss */
+/* line 206, ../scss/style.scss */
 .subpage-template h3 {
   font-size: 1.2em;
   font-weight: 500;
   color: #ab2431;
 }
-/* line 208, ../scss/style.scss */
+/* line 211, ../scss/style.scss */
 .subpage-template ul {
   padding: 20px 40px;
   line-height: 2em;
 }
-/* line 212, ../scss/style.scss */
+/* line 215, ../scss/style.scss */
 .subpage-template a {
   color: #ab2431;
 }
 
-/* line 217, ../scss/style.scss */
+/* line 220, ../scss/style.scss */
 .midsection h1 {
   margin: 40px 0 20px 0px;
   text-align: center;
   text-transform: uppercase;
 }
-/* line 222, ../scss/style.scss */
+/* line 225, ../scss/style.scss */
 .midsection span {
   color: #ab2431;
 }
-/* line 225, ../scss/style.scss */
+/* line 228, ../scss/style.scss */
 .midsection h2 {
   font-size: 1.3em;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px 0 30px 0px;
+  font-family: 'Raleway', sans-serif;
 }
-/* line 230, ../scss/style.scss */
+/* line 234, ../scss/style.scss */
 .midsection h3 {
   font-size: 1.2em;
   font-weight: 600;
   color: #ab2431;
 }
-/* line 235, ../scss/style.scss */
+/* line 239, ../scss/style.scss */
 .midsection p {
   font-family: sans-serif;
 }
 
-/* line 241, ../scss/style.scss */
+/* line 245, ../scss/style.scss */
 .solutions a {
   color: #333333;
   display: block;
@@ -287,18 +290,18 @@ ul {
   -moz-box-shadow: 0 0 16px 6px rgba(204, 202, 204, 0.6);
   box-shadow: 0 0 16px 6px rgba(204, 202, 204, 0.6);
 }
-/* line 250, ../scss/style.scss */
+/* line 254, ../scss/style.scss */
 .solutions img {
   margin: 0 auto;
   width: 50%;
   max-width: 220px;
 }
-/* line 255, ../scss/style.scss */
+/* line 259, ../scss/style.scss */
 .solutions p {
   padding-right: 3%;
 }
 
-/* line 259, ../scss/style.scss */
+/* line 263, ../scss/style.scss */
 .clients {
   background-image: url("../img/city.jpg");
   background-size: cover;
@@ -307,16 +310,16 @@ ul {
   padding: 40px;
   margin: 20px 0px 0px 0px;
 }
-/* line 266, ../scss/style.scss */
+/* line 270, ../scss/style.scss */
 .clients h1 {
   text-align: center;
   color: white;
 }
-/* line 270, ../scss/style.scss */
+/* line 274, ../scss/style.scss */
 .clients span {
   color: #333333;
 }
-/* line 273, ../scss/style.scss */
+/* line 277, ../scss/style.scss */
 .clients img {
   width: 55%;
   margin: 0 auto;
@@ -324,24 +327,24 @@ ul {
   opacity: 0.8;
   padding: 25px;
 }
-/* line 280, ../scss/style.scss */
+/* line 284, ../scss/style.scss */
 .clients ul {
   list-style: none;
 }
 
-/* line 284, ../scss/style.scss */
+/* line 288, ../scss/style.scss */
 .quotes {
   width: 80%;
   margin: 0 auto;
   padding: 30px 0 40px 0;
 }
-/* line 288, ../scss/style.scss */
+/* line 292, ../scss/style.scss */
 .quotes p {
   text-align: center;
   font-family: 'Raleway';
   font-size: 1.3em;
 }
-/* line 293, ../scss/style.scss */
+/* line 297, ../scss/style.scss */
 .quotes h3 {
   text-align: center;
   font-family: 'Montserrat';
@@ -349,11 +352,11 @@ ul {
   font-weight: 300;
   float: left;
 }
-/* line 300, ../scss/style.scss */
+/* line 304, ../scss/style.scss */
 .quotes span {
   color: #ab2431;
 }
-/* line 303, ../scss/style.scss */
+/* line 307, ../scss/style.scss */
 .quotes img {
   width: 20%;
   max-width: 50px;
@@ -362,38 +365,38 @@ ul {
   margin-right: auto;
 }
 
-/* line 312, ../scss/style.scss */
+/* line 316, ../scss/style.scss */
 .contact {
   padding: 20px 0;
 }
 
-/* line 316, ../scss/style.scss */
+/* line 320, ../scss/style.scss */
 footer {
   padding: 40px;
   color: white;
   background-color: #333333;
 }
-/* line 320, ../scss/style.scss */
+/* line 324, ../scss/style.scss */
 footer img {
   width: 50%;
   max-width: 175px;
   margin: 0 auto;
   padding-right: 5%;
 }
-/* line 326, ../scss/style.scss */
+/* line 330, ../scss/style.scss */
 footer h3 {
   font-family: arial;
   font-size: 1em;
   font-weight: 300;
   text-align: center;
 }
-/* line 332, ../scss/style.scss */
+/* line 336, ../scss/style.scss */
 footer h4 {
   font-size: 0.7em;
   text-align: center;
   letter-spacing: 1px;
 }
-/* line 337, ../scss/style.scss */
+/* line 341, ../scss/style.scss */
 footer a {
   display: block;
   text-align: center;
@@ -403,13 +406,13 @@ footer a {
 }
 
 @media screen and (min-width: 625px) {
-  /* line 347, ../scss/style.scss */
+  /* line 351, ../scss/style.scss */
   .dropdown {
     position: fixed;
     top: 76px;
   }
 
-  /* line 351, ../scss/style.scss */
+  /* line 355, ../scss/style.scss */
   .navigation-bar {
     position: fixed;
     top: 0;
@@ -417,27 +420,33 @@ footer a {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
   }
-  /* line 357, ../scss/style.scss */
+  /* line 361, ../scss/style.scss */
   .navigation-bar img {
     padding: 13px 0px 13px 5%;
     width: 130px;
   }
 
-  /* line 363, ../scss/style.scss */
-  .crosscover h1 {
-    font-size: 3em;
+  /* line 366, ../scss/style.scss */
+  .crosscover-island {
+    top: 240px;
   }
 
-  /* line 368, ../scss/style.scss */
+  /* line 370, ../scss/style.scss */
+  .crosscover-item h1 {
+    font-size: 3em;
+    padding-top: 140px;
+  }
+
+  /* line 376, ../scss/style.scss */
   .subpage-background h1 {
     font-size: 3em;
   }
 
-  /* line 372, ../scss/style.scss */
+  /* line 380, ../scss/style.scss */
   .solutions {
     text-align: center;
   }
-  /* line 374, ../scss/style.scss */
+  /* line 382, ../scss/style.scss */
   .solutions a {
     box-sizing: border-box;
     display: inline-block;
@@ -446,65 +455,69 @@ footer a {
     margin-right: 4%;
     vertical-align: top;
   }
-  /* line 382, ../scss/style.scss */
+  /* line 389, ../scss/style.scss */
+  .solutions a:hover {
+    opacity: 0.8;
+  }
+  /* line 394, ../scss/style.scss */
   .solutions img {
     width: 70%;
   }
 
-  /* line 387, ../scss/style.scss */
+  /* line 399, ../scss/style.scss */
   .quotes div {
     width: 90%;
     margin: 0 auto;
   }
-  /* line 391, ../scss/style.scss */
+  /* line 403, ../scss/style.scss */
   .quotes h3 {
     text-align: center;
   }
-  /* line 394, ../scss/style.scss */
+  /* line 406, ../scss/style.scss */
   .quotes img {
     display: inline-block;
     padding-left: 2.5%;
   }
 }
 @media screen and (min-width: 830px) {
-  /* line 403, ../scss/style.scss */
+  /* line 415, ../scss/style.scss */
   .menu-icon {
     display: none;
   }
 
-  /* line 407, ../scss/style.scss */
+  /* line 419, ../scss/style.scss */
   .main-nav {
     display: block;
     font-family: 'Raleway', sans-serif;
   }
-  /* line 410, ../scss/style.scss */
+  /* line 422, ../scss/style.scss */
   .main-nav ul {
     list-style: none;
     float: right;
     padding: 28px 5% 0px 0px;
   }
-  /* line 415, ../scss/style.scss */
+  /* line 427, ../scss/style.scss */
   .main-nav li {
     display: inline-block;
     padding: 5px;
   }
-  /* line 418, ../scss/style.scss */
+  /* line 430, ../scss/style.scss */
   .main-nav li:hover {
     color: #ab2431;
     border-bottom: 2px solid #ab2431;
   }
-  /* line 423, ../scss/style.scss */
+  /* line 435, ../scss/style.scss */
   .main-nav a {
     color: white;
     font-family: 'Montserrat';
     padding: 5px;
   }
-  /* line 427, ../scss/style.scss */
+  /* line 439, ../scss/style.scss */
   .main-nav a:hover {
     opacity: 0.8;
   }
 
-  /* line 432, ../scss/style.scss */
+  /* line 444, ../scss/style.scss */
   .dropdown {
     position: fixed;
     top: 76px;
@@ -513,30 +526,41 @@ footer a {
     padding: 10px;
   }
 
-  /* line 440, ../scss/style.scss */
+  /* line 451, ../scss/style.scss */
+  .crosscover-island {
+    top: 200px;
+  }
+
+  /* line 455, ../scss/style.scss */
+  .crosscover-item h1 {
+    font-size: 3em;
+    padding-top: 100px;
+  }
+
+  /* line 461, ../scss/style.scss */
   .clients li {
     width: 19%;
     display: inline-block;
   }
-  /* line 444, ../scss/style.scss */
+  /* line 465, ../scss/style.scss */
   .clients img {
     width: 70%;
   }
 
-  /* line 449, ../scss/style.scss */
+  /* line 470, ../scss/style.scss */
   .quotes div {
     width: 52%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  /* line 457, ../scss/style.scss */
+  /* line 478, ../scss/style.scss */
   footer a:hover, footer h4:hover {
     opacity: 0.8;
   }
 }
-@media screen and (min-width: 1000px) {
-  /* line 468, ../scss/style.scss */
+@media screen and (min-width: 1400px) {
+  /* line 489, ../scss/style.scss */
   .solutions a {
     width: 22%;
     margin-left: 1%;
@@ -544,17 +568,28 @@ footer a {
     padding: 10px;
     min-height: 480px;
   }
-  /* line 475, ../scss/style.scss */
+  /* line 496, ../scss/style.scss */
   .solutions a:hover {
     opacity: 0.8;
   }
 
-  /* line 480, ../scss/style.scss */
+  /* line 501, ../scss/style.scss */
   .dropdown {
     position: fixed;
     top: 76px;
     right: 12%;
     width: 200px;
     padding: 10px;
+  }
+
+  /* line 508, ../scss/style.scss */
+  .crosscover-island {
+    top: 340px;
+  }
+
+  /* line 512, ../scss/style.scss */
+  .crosscover-item h1 {
+    font-size: 3.2em;
+    padding-top: 240px;
   }
 }
