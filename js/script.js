@@ -27,8 +27,6 @@
 	//DROP DOWN ON HOVER OR ClICK 
 	$(function(){
 
-		$(".dropdown").hide();
-
 		$("#mobile-nav").on( "click", function(e){   
 	      	$(".dropdown").slideToggle(300);
 	      	e.preventDefault();

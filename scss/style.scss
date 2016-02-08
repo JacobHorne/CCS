@@ -63,6 +63,7 @@ ul{
 }
 
 .dropdown{
+    display: none;
     position: fixed;
     top: 68px;
     right: 0px;
@@ -187,6 +188,9 @@ ul{
         z-index:5000;
         text-align:center;
     }
+}
+.home-image{
+    z-index: -1000;
 }
 .subpage-template{
     padding:25px 3% 40px 3%;
@@ -348,10 +352,6 @@ footer{
 }
 
 @media screen and (min-width: 625px) {
-    .dropdown{
-        position: fixed;
-        top: 76px;
-    }
     .navigation-bar{
         position:fixed;
         top:0;
@@ -362,6 +362,9 @@ footer{
             padding: 13px 0px 13px 5%;
             width: 130px;
         }
+    }
+    .dropdown{
+        top:76px;
     }
     .crosscover-island{
         top: 240px;
@@ -415,6 +418,9 @@ footer{
     .menu-icon{
         display: none;
     }
+    .dropdown{
+        right: 13.5%;
+    }
 
     .main-nav{
         display:block;
@@ -431,6 +437,9 @@ footer{
             color: $red;
             border-bottom: 2px solid $red;
             }
+            &:nth-child(2){
+                position:relative;
+            }
         }
         a{
             color:white;
@@ -440,13 +449,6 @@ footer{
                 opacity:0.8;
             }
         }
-    }
-    .dropdown{
-        position: fixed;
-        top: 76px;
-        right: 16%;
-        width: 200px;
-        padding: 10px;
     }
     .crosscover-island{
         top: 200px;
@@ -484,7 +486,9 @@ footer{
 }
 
 @media screen and ( min-width: 1400px ){
-
+    .dropdown{
+        right: 10%;
+    }
     .solutions{
         a{
             width: 22%;
@@ -497,13 +501,6 @@ footer{
                 opacity:0.8;
             }
        }
-    }
-    .dropdown{
-        position: fixed;
-        top: 76px;
-        right: 12%;
-        width: 200px;
-        padding: 10px;
     }
     .crosscover-island{
         top: 340px;
