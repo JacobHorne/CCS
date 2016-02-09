@@ -6,10 +6,10 @@
 
 	//CODE FOR SLIDER
 	$( function(){ 
-		$(".crosscover").crosscover({
-		   	inClass:'fadeInRightBig',
+		var cc = $(".crosscover").crosscover({
+		   	inClass:'',
   			outClass:'fadeOutLeftBig',
-		    interval: 6000,
+		    interval: 5000,
 		    startIndex: 0,
 		    autoPlay: true,
 		    dotsNav: true,
@@ -22,6 +22,8 @@
 		    prevInnerHtml: '<span class="crosscover-icon-prev"></span>',
 		    nextInnerHtml: '<span class="crosscover-icon-next"></span>'
 		});
+
+		cc.data('crosscover').options.inClass = 'fadeInRightBig';
 	});
 
 	//DROP DOWN ON HOVER OR ClICK 
